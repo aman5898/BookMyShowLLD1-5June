@@ -1,5 +1,6 @@
 package org.scaler.bookmyshowlld15june.models;
 
+import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,6 +15,7 @@ public class Movie extends BaseModel{
     private String year;
     private String genre;
     private List<String> actors;
+    @ManyToMany
     private List<Language> languages;
     private Date releastDate;
     private double length;

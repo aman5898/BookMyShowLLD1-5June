@@ -14,6 +14,7 @@ public class Theatre extends BaseModel{
 //    private List<Screen> screens;
     private List<Movie> movies;
 //    @ManyToOne
+    @ManyToOne
     private Region region;
 }
 
