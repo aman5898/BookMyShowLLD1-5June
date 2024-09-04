@@ -11,4 +11,8 @@ public class BookMyShowLld15JuneApplication {
         SpringApplication.run(BookMyShowLld15JuneApplication.class, args);
     }
 
+//    Cardinalities
+//    Generate the table by running the code
+//     Book Ticket Feature Design // H.w. how to block multiple people booking the same seat
+
 }

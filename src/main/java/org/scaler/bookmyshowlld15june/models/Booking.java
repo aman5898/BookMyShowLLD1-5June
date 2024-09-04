@@ -1,21 +1,51 @@
 package org.scaler.bookmyshowlld15june.models;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.dialect.BooleanDecoder;
 
 import java.util.Date;
 import java.util.List;
 
 @Getter
 @Setter
+@Entity
 public class Booking extends BaseModel{
     private int amount;
+//    1 : M
+////    B : P
+//    1:1
+
+    @OneToMany
     private List<Payment> payments;
+//1: 1
+////    B : U
+//    M:1
+
+    @ManyToOne
     private User bookedBy;
     private Date bookingDate;
+
+    @Enumerated(value = EnumType.STRING)
     private BookingStatus bookingStatus;
+
+    @OneToMany
     private List<ShowSeat> showSeats;
 }
+
+//Booking
+//name id BookingStatus
+//              0
+//
+//BookingStatus
+//        0 -> Booked
+//1 -> Cancelled
+
+// Booking
+
+//id name BookingStatus
+
 
 // Break 10:28pm : 10:33pm
 
