@@ -1,5 +1,6 @@
 package org.scaler.bookmyshowlld15june.models;
 
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,5 +14,6 @@ public class User extends BaseModel{
     private String firstName;
     private String lastName;
     private String email;
+    @OneToMany
     private List<Booking> bookings;
 }

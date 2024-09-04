@@ -1,5 +1,7 @@
 package org.scaler.bookmyshowlld15june.models;
 
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,11 +12,17 @@ import java.util.List;
 @Setter
 public class Booking extends BaseModel{
     private int amount;
+    @OneToMany
     private List<Payment> payments;
+    @ManyToOne
     private User bookedBy;
     private Date bookingDate;
+    @ManyToOne
     private BookingStatus bookingStatus;
+
+    @OneToMany
     private List<ShowSeat> showSeats;
+
 }
 
 // Break 10:28pm : 10:33pm
