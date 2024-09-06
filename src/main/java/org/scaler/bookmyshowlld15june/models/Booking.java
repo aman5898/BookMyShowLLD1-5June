@@ -17,7 +17,7 @@ public class Booking extends BaseModel{
 ////    B : P
 //    1:1
 
-    @OneToMany
+    @OneToMany(mappedBy = "booking")
     private List<Payment> payments;
 //1: 1
 ////    B : U
@@ -31,6 +31,7 @@ public class Booking extends BaseModel{
     private BookingStatus bookingStatus;
 
     @OneToMany
+    @JoinColumn(name= "booking_id")
     private List<ShowSeat> showSeats;
 }
 

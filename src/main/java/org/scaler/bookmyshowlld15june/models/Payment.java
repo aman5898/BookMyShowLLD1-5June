@@ -25,3 +25,6 @@ public class Payment extends BaseModel{
     @ManyToOne
     private Booking booking;
 }
+
+
+//Many to ManyToOne

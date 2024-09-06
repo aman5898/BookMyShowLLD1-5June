@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
+@EnableJpaAuditing
 public class BookMyShowLld15JuneApplication implements CommandLineRunner {
     @Autowired
     UserController userController;
@@ -17,7 +19,7 @@ public class BookMyShowLld15JuneApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         SignUpRequestDTO requestDTO = new SignUpRequestDTO();
-        requestDTO.setEmail("puneet@gmail.com");
+        requestDTO.setEmail("Hari@gmail.com");
         requestDTO.setPassword("12345");
 
         SignUpResponseDTO responseDTO = userController.signUp(requestDTO);
@@ -35,5 +37,7 @@ public class BookMyShowLld15JuneApplication implements CommandLineRunner {
 //    -Agenda
 //    - [ ]  Book My Ticket Functionality
 //    - [ ]  Signup Functionality
+
+
 
 }
